@@ -114,6 +114,6 @@ dmypy.json
 .pyre/
 
 #token
-token.txt
+.token.txt
 .txt
 .idea/
