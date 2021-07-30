@@ -39,6 +39,10 @@ def ak(update,context):
     context.bot.send_photo(chat_id = update.effective_chat.id, photo=open('fotos/ak47.jpg','rb'))
     context.bot.send_message(chat_id=update.effective_chat.id, text="Jan AK")
 
+def vd(update,context):
+    context.bot.send_document(chat_id = update.effective_chat.id, document=open('videu.mov','rb'))
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Jan AK")
+
 
 TOKEN = open('token.txt').read().strip()
 updater = Updater(token=TOKEN,use_context=True)
@@ -49,6 +53,7 @@ dispatcher.add_handler(CommandHandler('hora',hora))
 dispatcher.add_handler(CommandHandler('dato',dato))
 dispatcher.add_handler(CommandHandler('suma',suma))
 dispatcher.add_handler(CommandHandler('ak',ak))
+dispatcher.add_handler(CommandHandler('vd',vd))
 
 updater.start_polling()
 
